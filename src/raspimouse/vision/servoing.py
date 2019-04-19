@@ -36,7 +36,10 @@ class VStracker:
         ## open motor
         self.flm = os.open("/dev/rtmotor_raw_l0",os.O_RDWR)
         self.frm = os.open("/dev/rtmotor_raw_r0",os.O_RDWR)
-
+        self.showflag=1
+        
+        
+        
     def get_des(self,name):
         return {
             'ORB': cv2.ORB_create(nfeatures=500,scoreType=cv2.ORB_HARRIS_SCORE),
@@ -86,10 +89,34 @@ class VStracker:
         pts1 = np.float32(pts1)
         pts2 = np.float32(pts2)
 
+        if self.showflag:
+            img3 = cv2.drawMatchesKnn(self.template, self.kp1, img, kp2, good, None, flags=2)
+            cv2.imshow("matched",img3)
+            cv2.waitKey(1)
 
         if count > 3:
-            self.visualTrack()
+            # found matches
+            self.visual_track(pts1,pts2)
         
+        
+    def visual_track(self,pts1,pts2):
+        # make jacob
+        pts1 =  pts1.reshape(-1,2)
+        pts2 =  pts2.reshape(-1,2)
+        f = 615
+
+        u_now = (317 - pts2[:,0].reshape(-1,1))/f
+        u_ref = (317 - pts1[:,0].reshape(-1,1))/f
+        
+        Z = 0.1 # 10cm
+        
+        h = 0.04
+        Jright = - u_now*u_now*Z+1 + h/Z
+        print(Jright.shape)
+        Jacob = np.concatenate([u_now,Jright],axis=1)
+        
+        print(np.dot(np.linalg.pinv(Jacob),u_ref-u_now))
+    
     def move_motor(self, fl,fr,duration):
         os.write(self.flm,fl)
         os.write(self.frm,fr)
@@ -98,23 +125,23 @@ class VStracker:
         os.write(self.flm,"0\n")
         os.write(self.frm,"0\n")
         
+        
+        
     '''
     Destructor
     '''
     def __del__(self):
         os.close(self.flm)
         os.close(self.frm)
-        res = subprocess.call(["echo 1 > /dev/rtmotoren0"],shell=True)
+        self.res = subprocess.call(["echo 0 > /dev/rtmotoren0"],shell=True)
 
 
 
 
 
 def quit():
-    os.close(flm)
-    os.close(frm)
-    res = subprocess.call(["echo 1 > /dev/rtmotoren0"],shell=True)
     cap.release()
+    print("quitprogram!")
     exit(0)
 
 
@@ -125,6 +152,9 @@ if __name__=='__main__':
     ret,frame = cap.read()
     times = 0
     ref = cv2.imread("reference.png")
+    cv2.imshow("ref",ref)
+
+    vs = VStracker(ref)
 
     while True:
         try:
@@ -132,9 +162,9 @@ if __name__=='__main__':
             cv2.imshow("frame",frame)
             c = cv2.waitKey(1)
             if c == ord('s'):
-                
+                vs.match(frame)
             elif c == ord('q'):
                 quit()  
-        except:
+        except KeyboardInterrupt:
             quit()           
         
