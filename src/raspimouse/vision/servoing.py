@@ -36,6 +36,7 @@ class VStracker:
         ## open motor
         self.flm = os.open("/dev/rtmotor_raw_l0",os.O_RDWR)
         self.frm = os.open("/dev/rtmotor_raw_r0",os.O_RDWR)
+        subprocess.call(["echo 1 > /dev/rtmotoren0"],shell=True)
         self.showflag=1
         
         
@@ -115,8 +116,21 @@ class VStracker:
         print(Jright.shape)
         Jacob = np.concatenate([u_now,Jright],axis=1)
         
-        print(np.dot(np.linalg.pinv(Jacob),u_ref-u_now))
-    
+        vref = np.dot(np.linalg.pinv(Jacob),u_ref-u_now) 
+        print(vref)
+        
+        
+        l = 0.09
+        Mvrvl = np.array([0.5,0.5,1/l/2,-1/l/2]).reshape(2,2)
+        
+        wheelref = np.dot(np.linalg.inv(Mvrvl),vref)
+        freqref = 80000.0/9/3.141592 * wheelref
+        
+        print(freqref)
+        gain = 0.2
+        duration = 100 #ms
+        self.move_motor(freqref[0],freqref[1],duration)        
+            
     def move_motor(self, fl,fr,duration):
         os.write(self.flm,fl)
         os.write(self.frm,fr)
@@ -133,7 +147,7 @@ class VStracker:
     def __del__(self):
         os.close(self.flm)
         os.close(self.frm)
-        self.res = subprocess.call(["echo 0 > /dev/rtmotoren0"],shell=True)
+        res = subprocess.call(["echo 0 > /dev/rtmotoren0"],shell=True)
 
 
 
