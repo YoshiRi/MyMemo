@@ -10,6 +10,13 @@ import numpy as np
 
 
 
+'''
+TODO
+- Motion is not quite good responce 
+
+'''
+
+
 class VStracker:
 
     def __init__(self,temp,descriptor = 'ORB'):
@@ -120,18 +127,15 @@ class VStracker:
         print(vref)
         
         
-        l = 0.09
-        Mvrvl = np.array([0.5,0.5,1/l/2,-1/l/2]).reshape(2,2)
+        forwardhz =  80000.0/9/3.141592*vref[0]
+        rothz = 400/3.141592 * vref[1]
         
-        wheelref = np.dot(np.linalg.inv(Mvrvl),vref)
-        freqref = 80000.0/9/3.141592 * wheelref
-        
-        print(freqref)
-        gain = 0.2
-        duration = 100 #ms
-        self.move_motor(freqref[0],freqref[1],duration)        
+        print(forwardhz-rothz,forwardhz+rothz)
+        gain = 0.8
+        duration = 10 #ms
+        self.move_motor(forwardhz-rothz,forwardhz+rothz,duration)        
             
-    def move_motor(self, fl,fr,duration):
+    def move_motor_safe(self, fl,fr,duration):
         os.write(self.flm,fl)
         os.write(self.frm,fr)
 
@@ -139,6 +143,11 @@ class VStracker:
         os.write(self.flm,"0\n")
         os.write(self.frm,"0\n")
         
+    def move_motor(self, fl,fr,duration):
+        os.write(self.flm,fl)
+        os.write(self.frm,fr)
+
+        time.sleep(duration/1000.0)
         
         
     '''
@@ -175,6 +184,7 @@ if __name__=='__main__':
             ret,frame = cap.read()
             cv2.imshow("frame",frame)
             c = cv2.waitKey(1)
+            vs.match(frame)
             if c == ord('s'):
                 vs.match(frame)
             elif c == ord('q'):
