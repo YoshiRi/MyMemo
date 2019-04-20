@@ -22,5 +22,10 @@ python motor.py <freq> <duration>
 
 ## vision
 
+- visual servo
+
+### debug information
+
+- input for motor should be (int number) and (string) type
 
 
