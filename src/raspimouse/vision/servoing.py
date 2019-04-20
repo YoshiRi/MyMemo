@@ -12,8 +12,9 @@ import numpy as np
 
 '''
 TODO
-- Motion is not quite good responce 
-
+- Motion is too bad... 
+- ROS implementation
+- Backward motion
 '''
 
 
@@ -102,7 +103,9 @@ class VStracker:
             cv2.imshow("matched",img3)
             cv2.waitKey(1)
 
-        if count > 3:
+        self.move_motor(400,400,50)
+
+        if count > 2:
             # found matches
             self.visual_track(pts1,pts2)
         
@@ -123,7 +126,8 @@ class VStracker:
         print(Jright.shape)
         Jacob = np.concatenate([u_now,Jright],axis=1)
         
-        vref = np.dot(np.linalg.pinv(Jacob),u_ref-u_now) 
+        gain = 0.4
+        vref = gain*np.dot(np.linalg.pinv(Jacob),u_ref-u_now) 
         print(vref)
         
         
@@ -131,10 +135,11 @@ class VStracker:
         rothz = 400/3.141592 * vref[1]
         
         print(forwardhz-rothz,forwardhz+rothz)
-        gain = 0.8
-        duration = 10 #ms
-        self.move_motor(forwardhz-rothz,forwardhz+rothz,duration)        
-            
+        
+        duration = 100 #ms
+        #self.move_motor(forwardhz-rothz,forwardhz+rothz,duration)        
+        #self.move_motor(100+np.random.rand()*100,100+np.random.rand()*100,duration)        
+    
     def move_motor_safe(self, fl,fr,duration):
         os.write(self.flm,fl)
         os.write(self.frm,fr)
@@ -144,8 +149,8 @@ class VStracker:
         os.write(self.frm,"0\n")
         
     def move_motor(self, fl,fr,duration):
-        os.write(self.flm,fl)
-        os.write(self.frm,fr)
+        os.write(self.flm,str(fl))
+        os.write(self.frm,str(fr))
 
         time.sleep(duration/1000.0)
         
