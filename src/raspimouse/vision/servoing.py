@@ -103,11 +103,13 @@ class VStracker:
             cv2.imshow("matched",img3)
             cv2.waitKey(1)
 
-        self.move_motor(400,400,50)
+        
 
         if count > 2:
             # found matches
             self.visual_track(pts1,pts2)
+        else:
+            self.stop_motor()
         
         
     def visual_track(self,pts1,pts2):
@@ -126,7 +128,7 @@ class VStracker:
         print(Jright.shape)
         Jacob = np.concatenate([u_now,Jright],axis=1)
         
-        gain = 0.4
+        gain = 0.1
         vref = gain*np.dot(np.linalg.pinv(Jacob),u_ref-u_now) 
         print(vref)
         
@@ -136,9 +138,9 @@ class VStracker:
         
         print(forwardhz-rothz,forwardhz+rothz)
         
-        duration = 100 #ms
-        #self.move_motor(forwardhz-rothz,forwardhz+rothz,duration)        
-        #self.move_motor(100+np.random.rand()*100,100+np.random.rand()*100,duration)        
+        duration = 20 #ms
+        self.move_motor(forwardhz-rothz,forwardhz+rothz, duration)
+      
     
     def move_motor_safe(self, fl,fr,duration):
         os.write(self.flm,fl)
@@ -149,10 +151,14 @@ class VStracker:
         os.write(self.frm,"0\n")
         
     def move_motor(self, fl,fr,duration):
-        os.write(self.flm,str(fl))
-        os.write(self.frm,str(fr))
+        os.write(self.flm,str(int(fl)))
+        os.write(self.frm,str(int(fr)))
 
         time.sleep(duration/1000.0)
+
+    def stop_motor(self):
+        os.write(self.flm,"0\n")
+        os.write(self.frm,"0\n")
         
         
     '''
