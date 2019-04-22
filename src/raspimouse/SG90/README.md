@@ -1,6 +1,33 @@
 
-# SG90 control for RasPimouse
+# SG90 control for Raspberrypi
 
+SG90 servo controller class for raspberry pi and python.
+
+## Dependency
+
+You need following packages:
+- RPi.GPIO
+
+It worked on
+- Ubuntu16.04
+- python2.7 (on ROS)
+
+
+## Usage
+
+- select your port
+
+```python
+from SG90servo import *
+
+servo = SG90servo(2) #Initialize with port 2 as OUT
+servo.servo_deg(60) #Move to 60deg
+
+servo.stop() # stop servo
+```
+
+
+# For the Raspimouse users
 You will have extern ports in RasPimouse electric circuit.
 
 - *SDA* means GPIO 2
@@ -34,14 +61,4 @@ servo.ChangeDutyCycle(12.0) # 90 deg
 
 ```
 
-# Myfunction
 
-
-```python
-from SG90servo import *
-
-servo = SG90servo(2) #Initialize with port 2 as OUT
-servo.servo_deg(60) #Move to 60deg
-
-servo.stop() # stop servo
-```
