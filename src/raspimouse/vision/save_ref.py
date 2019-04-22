@@ -20,5 +20,5 @@ while True:
             cap.release()
             exit(0)        
     except:
-        cv2.destroyAllwindow()
+        cap.release()
         exit(-1)
