@@ -7,9 +7,27 @@ Cta = xcar.Data(end,3);
 hold on
 plot(obj_points(1,:),obj_points(2,:),'s')
 quiver(xcar.Data(end,1),xcar.Data(end,2),cos(Cta),sin(Cta),'r');
-legend('Ref','Tracking path','Init Pose','After 5s','Objects','Location','Best')
+legend('Ref','Tracking path','Init Pose','Final Pose','Objects','Location','Best')
 grid on
 hold off
+
+fig=figure(10)
+fig.Position = [1,1,1000,280]
+plot(x_ref(1),x_ref(2),'o',xcar.Data(:,1),xcar.Data(:,2),'-',xcar.Data(1,1),xcar.Data(1,2),'+',xcar.Data(end,1),xcar.Data(end,2),'x')
+Cta = xcar.Data(end,3);
+hold on
+plot(obj_points(1,:),obj_points(2,:),'s')
+% quiver(xcar.Data(end,1),xcar.Data(end,2),cos(Cta),sin(Cta),'r');
+plot_baseballbase(x_ref(1),x_ref(2),x_ref(3),0.1);
+plot_baseballbase(xcar.Data(end,1),xcar.Data(end,2),Cta,0.1);
+plot_baseballbase(xcar.Data(1,1),xcar.Data(1,2),xcar.Data(1,3),0.1);
+
+legend('Goal','Tracking path','Init Pose','Final Pose','Objects','Location','Best')
+xlabel('x [m]')
+ylabel('y [m]')
+grid on
+hold off
+
 
 %%
 figure(2)
@@ -64,7 +82,7 @@ plot(t,image_vref,'--',t,image_v)
 legend('v1_{ref}','v2_{ref}','v3_{ref}','v1_{tracked}','v2_{tracked}','v3_{tracked}','Location','Best')
 xlabel('time [s]')
 ylabel('Vertical image coordinate [pix]')
-title('horizontal feature')
+title('vertical feature')
 grid on;
 
 %%
@@ -83,7 +101,7 @@ grid on;
 %% image view
 
 figure(6)
-plot(image_uref(1,:),image_vref(1,:),'bo',image_u(1,:),image_v(1,:),'rx',image_u(end,:),image_v(end,:),'mx')
+plot(image_uref(1,:),image_vref(1,:),'bo',image_u(1,:),image_v(1,:),'r+',image_u(end,:),image_v(end,:),'mx')
 hold on
 for i = 1:4
 plot(image_u(:,i),image_v(:,i),'-.')
@@ -92,8 +110,8 @@ hold off
 grid on
 xlabel('horizontal u[pix]')
 ylabel('vertical v[pix]')
-legend('reference','start','after 5s','trajectory')
-
+legend('reference','start','Final Pose','trajectory')
+title('Image Plane')
 %% depth view
 figure(7)
 

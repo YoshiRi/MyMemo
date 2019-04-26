@@ -5,10 +5,10 @@ clear
 
 %%
 % init state
-theta_0 = -0.15;
-% theta_0 = 0;
+% theta_0 = -0.15;
+theta_0 = 0;
 x_0 = -1.0;
-y_0 = 0.0; 
+y_0 = 0.2; 
 f = 610;
 K = [f 0 0;0 f 0; 0 0 1];
 
@@ -37,3 +37,13 @@ open('VS_uandv_4pointver.slx')
 %%
 sim('VS_uandv_4pointver');
 plotfig4
+
+%%
+
+ucontrol.vw=vwinput;
+ucontrol.u = image_u;
+ucontrol.u_ref = image_uref;
+ucontrol.v = image_v;
+ucontrol.v_ref = image_vref;
+ucontrol.xcar = xcar.Data;
+ucontrol.t = t;
