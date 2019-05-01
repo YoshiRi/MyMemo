@@ -5,6 +5,9 @@ import time
 print(cv2.__version__)
 cap = cv2.VideoCapture(0)
 ret,frame = cap.read()
+if not ret:
+    print('can not open video!')
+    exit(1)
 times = 0
 
 while True:
