@@ -5,10 +5,11 @@ clear
 
 %%
 % init state
-% theta_0 = -0.15;
-theta_0 = 0;
-x_0 = -1.0;
-y_0 = 0.2; 
+%theta_0 = -0.15; x_0 = -1.0; y_0 = 0.2;
+theta_0 = 0; x_0 = -1.0; y_0 = 0.2;
+theta_0 = 0.15; x_0 = -1.0; y_0 = 0.0;
+%theta_0 = 0.3; x_0 = 0.0; y_0 = 0.0;
+
 f = 610;
 K = [f 0 0;0 f 0; 0 0 1];
 
@@ -34,7 +35,6 @@ open('VS_uandv_4pointver.slx')
 %%
 %plotfig4
 
-%%
 sim('VS_uandv_4pointver');
 plotfig4
 
