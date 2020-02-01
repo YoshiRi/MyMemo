@@ -42,8 +42,8 @@ uvdot_Z = subs(uvdot_,Cobj(3),Z)
 %v=(f*(cz - pz + vz(t)))/Z
 
 %%
-uv = {(f*(cy - py*cos(theta(t)) + px*sin(theta(t)) + cos(theta(t))*vy(t) - sin(theta(t))*vx(t))),(f*(cz - pz + vz(t)))};
-uvdot_uvz = simplify(subs(uvdot_Z,uv,{u*Z,v*Z}))
+uv = {subs(imagepoints(1),Cobj(3),Z),(f*(cz - pz + vz(t)))};
+uvdot_uvz = simplify(subs(uvdot_Z,uv,{u,v*Z}))
 
 % uv = {(f*(- py*cos(theta(t)) + px*sin(theta(t)) + cos(theta(t))*vy(t) - sin(theta(t))*vx(t))),(f*(- pz + vz(t)))};
 % uvdot_uvz = simplify(subs(uvdot_Z,uv,{u*Z-f*cy,v*Z-f*cz}))
@@ -58,8 +58,10 @@ vars = [vxdot vydot omega];
 
 A = simplify(equationsToMatrix(eqn,vars));
 
+before={(- py*cos(theta(t)) + px*sin(theta(t)) + cos(theta(t))*vy(t) - sin(theta(t))*vx(t)),px*cos(theta(t))  + py*sin(theta(t)) - cos(theta(t))*vx(t) - sin(theta(t))*vy(t)};
+A_ = simplify(subs(A,before,{u*Z/f-cy,Z+cx}))
 
-subs(A,(- py*cos(theta(t)) + px*sin(theta(t)) + cos(theta(t))*vy(t) - sin(theta(t))*vx(t)),u*Z/f-cy)
+%A_(6)=v*(Zu/f-cy)/Z ?
 %% jimichi
 syms h X
 J1 = [f/Z -u/Z];

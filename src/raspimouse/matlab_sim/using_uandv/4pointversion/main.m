@@ -32,11 +32,15 @@ ST = 1e-3;
 open('VS_uandv_4pointver.slx')
 
 
-%%
+%% plot
 %plotfig4
 
 sim('VS_uandv_4pointver');
 plotfig4
+
+%% get final jacob
+fjacob = Jacob.Data(:,:,end);
+
 
 %%
 
