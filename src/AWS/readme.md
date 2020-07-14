@@ -1,7 +1,9 @@
 # AWS service trial
+[Lecture Page](https://tomomano.gitlab.io/intro-aws/#_hands_on_1_%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AEec2%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B)
 
+# Lecture 1 : Setup
 ```
-
+docker run -it registry.gitlab.com/tomomano/intro-aws:latest
 ```
 
 Go to aws page and get key
@@ -18,7 +20,7 @@ put, key, secret key, ap-northeast-1
 - setting up cdk
 
 ```
-ckd bootstrap
+cdk bootstrap
 ```
 
 go to [here](https://ap-northeast-1.console.aws.amazon.com/cloudformation/home?region=ap-northeast-1#/stacks?filteringText=&filteringStatus=active&viewNested=true&hideStacks=false&stackId=arn%3Aaws%3Acloudformation%3Aap-northeast-1%3A050138915699%3Astack%2FMyFirstEc2%2Febb7ddb0-c5cb-11ea-895f-0ac3b391d020) to delete invalid stack.
@@ -41,10 +43,13 @@ MyFirstEc2.InstancePublicDnsName = ec2-54-95-98-35.ap-northeast-1.compute.amazon
 > Stack ARN:
 arn:aws:cloudformation:ap-northeast-1:050138915699:stack/MyFirstEc2/571a6e30-c5d4-11ea-895f-0ac3b391d020
 
-
+- ログインしてみる
 ```
 ssh -i ~/.ssh/NewHirakeGoma.pem ec2-user@54.95.98.35
 ```
+sudo yum update -y
+sudo yum install -y python36
+
 
 <details>
 <summary>
@@ -89,3 +94,31 @@ aws s3 rb "s3://${bucketName}" --force
 
 </details>
 
+
+## 後片付け
+
+- Delete cdk **(Don't forget!)**
+
+```  
+cdk destroy
+```
+
+```
+aws ec2 delete-key-pair --key-name "HirakeGoma"
+aws ec2 delete-key-pair --key-name "NewHirakeGoma"
+rm -f ~/.ssh/HirakeGoma.pem
+rm -f ~/.ssh/NewHirakeGoma.pem
+```
+
+
+
+
+### 用語
+- Stack：AWSリソースの集合
+- リソースの操作：静的なリソースを用意すること
+- タスクを実行するコマンド：動的な操作を行うこと
+- CloudFormation：リソースを管理するための仕組み。
+- 
+
+
+# Lecture2 
