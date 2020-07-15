@@ -47,3 +47,18 @@ catkin build rovio --cmake-args -DCMAKE_BUILD_TYPE=Release
 NEED euroc mav dataset to following place
 /home/michael/datasets/euroc/01_easy/dataset.bag
 
+2.5GB ... orz
+it's too large.
+
+## Vim Setting
+無変換を半角変換にした。
+以下のサイトで自動設定したほうがよいかもしれない。
+https://endaaman.me/-/linux_keyboard_config
+
+```
+dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
+```
+
+Ctrl+CがEscぽいのでなんとかなりそう。
+
+ここの設定を試してみた。[](https://qiita.com/matsuo7005/items/7aa5acc4820dc786eee4)
