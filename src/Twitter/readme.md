@@ -41,9 +41,25 @@ docker run --rm -it -v/<PATH_TO_SOME_SHARED_FOLDER_FOR_RESULTS>:/app/data twitte
 Query means the command. Ok.
 
 - view help
+```
 docker run --rm -it -v /home/yoshi/Documents/GitHub/MyMemo/src/Twitter:/app twitterscraper:build twitterscraper --help
+```
 
-- Donwloading
+- Donwloading1
+```
 docker run --rm -it -v /home/yoshi/Documents/GitHub/MyMemo/src/Twitter:/app twitterscraper:build twitterscraper slam_hub --user -o slamhub.txt --lang ja -l 1200
+```
+
+- Donwloading2
+
+```
+docker run --rm -it -v /home/yoshi/Documents/GitHub/MyMemo/src/Twitter:/app twitterscraper:build twitterscraper "from:slam_hub" -o slamhub2.json --lang ja -l 2000
+```
+
+- Donwloading3
+
+```
+docker run --rm -it -v /home/yoshi/Documents/GitHub/MyMemo/src/Twitter:/app twitterscraper:build twitterscraper "from:slam_hub" -o slamhub3.json --lang ja -l 2000 -bd 2020-01-01BB
+```
 
 more ?
