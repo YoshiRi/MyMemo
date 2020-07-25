@@ -4,24 +4,30 @@
 
 スクレイピングに使えるTwitter APIは申請時に結構面倒な作文を要求されるので面倒な作業のいらないものを探していた，
 
-## Docker Build
+pipでインストールできるようだが，自分の散らかったPython環境だと上手く行かなかったのと，Python環境がPC毎に違うのでDockerでやることにした。
+
+https://github.com/jonbakerfish/TweetScraper
+
+## DockerでBuild
+
+ホームにいって以下のビルドを試す。
 
 ```
 docker build -t twitterscraper:build .
 ```
 
-Error
+自分の環境では以下のようなErrorがでた。
 
 ```
 Please make sure the libxml2 and libxslt development packages are installed.
 ```
 
-[ここを見てFix](https://github.com/taspinar/twitterscraper/issues/250)
+依存関係のあるパッケージが上手くはいっていなかったので
+[ここを見て](https://github.com/taspinar/twitterscraper/issues/250)
+Docker FileをFixする。
 
 
-Done
-
-## Create Shared Drive for Docker
+### Docker memo：Create Shared Drive for Docker
 
 https://www.virment.com/docker-sharing-folder-setup/
 
@@ -38,12 +44,20 @@ you can just do it by command
 docker run --rm -it -v/<PATH_TO_SOME_SHARED_FOLDER_FOR_RESULTS>:/app/data twitterscraper:build <YOUR_QUERY>
 ```
 
-Query means the command. Ok.
+QueryとはここではDocker環境で実行するコマンドのようだ。
+
 
 - view help
 ```
-docker run --rm -it -v /home/yoshi/Documents/GitHub/MyMemo/src/Twitter:/app twitterscraper:build twitterscraper --help
+docker run --rm -it twitterscraper:build twitterscraper --help
 ```
+
+
+# 特定のユーザのTweetをスクレイピング
+
+
+特定のユーザのTweetを抜き出すには`--user`オプションを用いる手法と`from:<USERNAME>`のクエリを指定することでも検索できる。
+`--lang`で日本語を指定している。
 
 - Donwloading1
 ```
@@ -62,4 +76,4 @@ docker run --rm -it -v /home/yoshi/Documents/GitHub/MyMemo/src/Twitter:/app twit
 docker run --rm -it -v /home/yoshi/Documents/GitHub/MyMemo/src/Twitter:/app twitterscraper:build twitterscraper "from:slam_hub" -o slamhub3.json --lang ja -l 2000 -bd 2020-01-01BB
 ```
 
-more ?
+もっとたくさんあるはずだが？？
