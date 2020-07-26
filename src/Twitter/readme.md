@@ -77,3 +77,5 @@ docker run --rm -it -v /home/yoshi/Documents/GitHub/MyMemo/src/Twitter:/app twit
 ```
 
 もっとたくさんあるはずだが？？
+
+# DL サムネイルてすと
