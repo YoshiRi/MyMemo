@@ -1,6 +1,6 @@
 ---
 marp: true
-header: 'header text'
+header: 'from @slam_hub'
 footer: '@ossyaritoori'
 
 size: 16:9
