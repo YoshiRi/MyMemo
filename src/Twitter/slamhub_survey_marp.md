@@ -1,16 +1,23 @@
+---
+marp: true
+header: 'header text'
+footer: '@ossyaritoori'
+
+size: 16:9
+paginate: true
+---
 
 ---
 ## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
 多視点物体認識のための特徴量抽出を自己教師あり学習する手法を提案．代理タスクとして，オブジェクトクラス分類を通し距離学習を行う．これにより視点に因らず同一オブジェクトならば埋め込み表現上でクラスターを形成．ダウンストリームタスクで他手法より高い精度を達成．
 https://arxiv.org/abs/2003.12735 pic.twitter.com/YyvMehYHKd
- ![bg right:40% cover](https://pbs.twimg.com/media/Edva-6wU8AUplEB.png)
+ ![bg cover](https://pbs.twimg.com/media/Edva-6wU8AUplEB.png)
 
 ---
 ## Leveraging Stereo-Camera Data for Real-Time Dynamic Obstacle Detection and Tracking
 
 ステレオカメラの情報から動的な障害を検出，追跡するシステムの提案．ロボット周囲の物体について動的・静的の2クラスに分類．さらに動的な物体については人とそれ以外のクラスに分類する．ノイズの多いデータから高い精度の動的物体の検出,追跡が可能なことを実験で確認．https://youtu.be/AYjgeaQR8uQ 
- ![bg right:40% cover](https://i.ytimg.com/vi_webp/AYjgeaQR8uQ/maxresdefault.webp
-)
+ ![bg  cover](https://i.ytimg.com/vi_webp/AYjgeaQR8uQ/maxresdefault.webp)
 
 ---
 ## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
