@@ -9,8 +9,10 @@ paginate: true
 
 # SLAM_HUB Twitter 情報まとめ
 
+
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Exploit Clues from Views: Self-Supervised and Regularized Learning for
+  Multiview Object Recognition
 多視点物体認識のための特徴量抽出を自己教師あり学習する手法を提案．代理タスクとして，オブジェクトクラス分類を通し距離学習を行う．これにより視点に因らず同一オブジェクトならば埋め込み表現上でクラスターを形成．ダウンストリームタスクで他手法より高い精度を達成．
 https://arxiv.org/abs/2003.12735 pic.twitter.com/YyvMehYHKd
  ![bg right:40% fit](https://pbs.twimg.com/media/Edva-6wU8AUplEB.png)
@@ -22,7 +24,7 @@ https://arxiv.org/abs/2003.12735 pic.twitter.com/YyvMehYHKd
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/AYjgeaQR8uQ/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## FutureMapping: The Computational Structure of Spatial AI Systems
 SLAM （自己位置推定と地図構築）を発展させ，シーンやオブジェクトの関係性を理解する #SpatialAI の開発が進められている ．#SpatialAI を実際のアプリケーションに応用する上で必要なアルゴリズムやプロセッサ，センサの連携などについて提唱された最初の論文．
 https://arxiv.org/abs/1803.11288 pic.twitter.com/bm9sSOj5qN
  ![bg right:40% fit](https://pbs.twimg.com/media/EdhgCeRU0AYBeua.png)
@@ -34,19 +36,22 @@ https://arxiv.org/abs/1803.11288 pic.twitter.com/bm9sSOj5qN
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/b62iDkLgGSI/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## JSENet: Joint Semantic Segmentation and Edge Detection Network for 3D
+  Point Clouds
 3次元点群に対してセグメンテーションとクラス境界の推定を同時に行う手法を提案．相互に関連する両タスクを同時に解くだけでなく，双方の推定結果を用いてさらに精緻化を行うNNモジュールを提案．屋内データ（S3DIS）でSOTAを達成．
 https://arxiv.org/abs/2007.06888 pic.twitter.com/O52VDKG07v
  ![bg right:40% fit](https://pbs.twimg.com/media/EdYEOW7VAAAj2sM.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Free-Space Features: Global Localization in 2D Laser SLAM Using Distance
+  Function Maps
 2D SLAMにおける地図表現にSDFを導入し，計測点が存在しない空間の情報を使った局所特徴(free-space features)を提案．曲率ベースの特徴点検出と方向付き勾配ヒストグラムを使った記述子を使い，従来手法より大域位置認識が高精度に行えることを示した．
 https://arxiv.org/abs/1908.01863 pic.twitter.com/GJSmADnz12
  ![bg right:40% fit](https://pbs.twimg.com/media/EdVp-HCUYAIGpyK.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Free-Space Features: Global Localization in 2D Laser SLAM Using Distance
+  Function Maps
 2D SLAMにおける地図表現にSDFを導入し，計測点が存在しない空間の情報を使った局所特徴(free-space features)を提案．曲率ベースの特徴点検出と方向付き勾配ヒストグラムを使った記述子を使い，従来手法より大域位置認識が高精度に行えることを示した．
 https://arxiv.org/abs/1908.01863 pic.twitter.com/GJSmADnz12
  ![bg right:40% fit](https://pbs.twimg.com/media/EdVp-HCUYAIGpyK.png)
@@ -58,13 +63,14 @@ https://arxiv.org/abs/1908.01863 pic.twitter.com/GJSmADnz12
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/ifL8yTbRFDk/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## World-Consistent Video-to-Video Synthesis
 大域的な一貫性を保ったvid2vid．直前の数フレームに基づきクエリ(セマンティクス画像)に対応する画像生成を行う従来法では，同じ位置に立ち戻る場合に一貫性が保証されない．提案手法では，SfMを利用して環境を逐次的に3次元復元し，その幾何をガイドとした画像生成を行う．
 https://arxiv.org/abs/2007.08509 pic.twitter.com/uaQO8g5ofF
  ![bg right:40% fit](https://pbs.twimg.com/media/EdLUT0hUMAIVyYt.jpg)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Tightly-coupled Fusion of Global Positional Measurements in
+  Optimization-based Visual-Inertial Odometry
 Pre-Integration を用いた Tight-coupled な Visual-Inertial Odometry (VIO) に、GPS等によるグローバル座標拘束を導入する手法を初めて提案．従来法はVIOの後段にカルマンフィルタ等を用いて分割して対処．提案手法はコスト関数に拘束を組込み一括で最適化．
 https://arxiv.org/abs/2003.04159 pic.twitter.com/Im1bHSvCyO
  ![bg right:40% fit](https://pbs.twimg.com/media/EdBEUIHUcAE5_bz.png)
@@ -76,30 +82,31 @@ https://arxiv.org/abs/2003.04159 pic.twitter.com/Im1bHSvCyO
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/tnPfbJaPrSQ/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Self-Supervised Viewpoint Learning From Image Collections
 画像からの物体方向推定を，self-supervisedに学習する枠組みを提案．画像から3次元方向とスタイル特徴量を抽出し，それらの潜在変数を元に幾何学的変換を行うGenerator(GAN)を用いて学習．損失には一貫性と水平対称性を利用し，教師あり学習に匹敵する性能を達成．
 https://arxiv.org/abs/2004.01793 pic.twitter.com/Qr4LM3uTxA
  ![bg right:40% fit](https://pbs.twimg.com/media/Ec2t_Y-UcAAYEyM.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## ODE-CNN: Omnidirectional Depth Extension Networks
 Kinect等のPerspectiveなdepthセンサーと全方位画像を用いて全方位のdepthを得る手法の提案.Encoderの最後の層でPerspective座標に変換し特徴量の学習難度を下げ、Decoderでequirectangular座標に戻す.他のSoTAな手法より優れていることを示した.
 https://arxiv.org/abs/2007.01475 pic.twitter.com/ZYPB7ysvaY
  ![bg right:40% fit](https://pbs.twimg.com/media/EcuxFqyU4AAiQBT.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## 360-Indoor: Towards Learning Real-World Objects in 360° Indoor
+  Equirectangular Images
 360度屋内画像における物体検出とクラス認識に関するデータセットを提示．Equirectangular形式における極領域の歪みに対応するため，Sphere Netをはじめとする球状CNNを用いたモデルで評価したところ，透視投影画像によるデータセットでの学習よりも大きな改善が見られた．https://arxiv.org/abs/1910.01712 pic.twitter.com/buiy0FHupl
  ![bg right:40% fit](https://pbs.twimg.com/media/EctNZZjVcAA-IRH.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Pseudo RGB-D for Self-Improving Monocular SLAM and Depth Prediction
 CNNで推定した擬似的なデプスマップを用いてRGB-D SLAMを行う．単眼デプス推定の欠点であるスケールの不整合性を，特徴点ベースのSLAMで作成された三次元点を用いてリファインする．これにより，両者の欠点を補った高精度な姿勢推定が可能となった．
 https://arxiv.org/abs/2004.10681 pic.twitter.com/OXOuG5onDG
  ![bg right:40% fit](https://pbs.twimg.com/media/EcnZCpAUEAEpnSG.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## FPConv: Learning Local Flattening for Point Convolution
 平面への投影を用いた点群畳み込みを提案．明示的に接平面を推定するTangentConvとは異なり，点群の投影と内挿を単一の重み行列で表現し，MLPを用いて学習ベースで推定する．Volmetricな畳み込みとの組み合わせでSoTA達成．
 https://arxiv.org/abs/2002.10701 pic.twitter.com/ZmJ3UuwIg1
  ![bg right:40% fit](https://pbs.twimg.com/media/EceUhQ5VAAEEjKk.jpg)
@@ -123,7 +130,7 @@ LIDARを使った位置推定手法．極座標で作られた高さマップ(Sc
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/Jvl42VJmYxg/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Visual-Inertial Mapping with Non-Linear Factor Recovery
 Visual-Inertial SLAM の Basalt。IMU の preintegration ではなく、非線形因子復元を行って大域的に最適化。IMU の積分は誤差が大きい問題に対処。VIO の相対位置拘束とロール・ピッチ拘束、バンドル調整のループ拘束を統合。小さな最適化問題として定式化でき、精度も向上。
 https://arxiv.org/abs/1904.06504 pic.twitter.com/mQYfoQ4yjd
  ![bg right:40% fit](https://pbs.twimg.com/media/EcNbQNwVcAEqhUL.jpg)
@@ -135,7 +142,8 @@ https://ieeexplore.ieee.org/document/9099049 …pic.twitter.com/HnpTxH7bL6
  ![bg right:40% fit]()
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Statistical Outlier Identification in Multi-robot Visual SLAM using
+  Expectation Maximization
 複数マップ間のループ検出における外れ値検出手法を提案．各ノード間の回転から閉ループの幾何的整合性をチェックすることで確率的に外れ値を検出．さらにEMアルゴリズムを用いてパラメータをfine-tune．確率伝搬法より高い精度を達成し，収束性も保証．
 https://arxiv.org/abs/2002.02638 pic.twitter.com/zugcqk2JzE
  ![bg right:40% fit](https://pbs.twimg.com/media/EcDXJCJUcAEXBxP.jpg)
@@ -147,7 +155,7 @@ https://arxiv.org/abs/2002.02638 pic.twitter.com/zugcqk2JzE
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/dI2FZG_txN0/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## 3D Human Mesh Regression with Dense Correspondence
 一枚の画像から人体の3D Meshを推定する手法.画像ピクセルと表面間の密な対応を推定し,その対応により画像空間からUV空間へ局所的な特徴が移され,位置マップに回帰される.最後にマッピング関数により3D Meshを再構成する.3D Meshベースの従来手法より優れていることを示した.
 https://arxiv.org/abs/2006.05734 pic.twitter.com/Ku422DMyAp
  ![bg right:40% fit](https://pbs.twimg.com/media/Eb42BPFUcAAAe1E.jpg)
@@ -159,7 +167,7 @@ https://arxiv.org/abs/2006.05734 pic.twitter.com/Ku422DMyAp
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/DYBmD88vpiA/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## An Analysis of SVD for Deep Rotation Estimation
 深層学習における性質の良い回転表現を提案．
 回転行列を一度9パラメータで表現し，SVDによる特殊直交化によりSO(3)空間へマップする．
 深層学習タスクにおいてクォータニオンやangle-axisベクトルなどの他の回転表現より高精度に姿勢を求めることが可能．
@@ -167,13 +175,13 @@ https://arxiv.org/abs/2006.14616 pic.twitter.com/WVhQcNGBad
  ![bg right:40% fit](https://pbs.twimg.com/media/EbuUgMbU8AEbJUJ.jpg)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Grid-GCN for Fast and Scalable Point Cloud Learning
 高速でスケーラブルな点群データの処理機構を提案．Voxelを用いることで高速かつカバー率の高いサンプリングを行い，Voxel内部でローカルにグラフを構築して畳み込む．点群の分類とセグメンテーションで従来手法より高速かつ高精度を達成．
 https://arxiv.org/abs/1912.02984 pic.twitter.com/nlIsA1sC2v
  ![bg right:40% fit](https://pbs.twimg.com/media/EbpbVrhVcAM26gU.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## PointTriNet: Learned Triangulation of 3D Point Sets
 PointNetに類似したネットワークを用い点群から三角形メッシュを生成．入力点群から三角形群を出力するネットと，入力三角形群の中から3Dモデルとして妥当な三角形を判定するネットを交互に適用し，メッシュモデルを復元する．
 https://arxiv.org/abs/2005.02138 pic.twitter.com/8JeOljgxXg
  ![bg right:40% fit](https://pbs.twimg.com/media/EbkUPnoUEAElg-3.jpg)
@@ -191,19 +199,21 @@ https://arxiv.org/abs/2005.02138 pic.twitter.com/8JeOljgxXg
  ![bg right:40% fit](https://i.ytimg.com/vi/B4YBWFuYBdE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLA2YAttIJoqzxaW92JVThwPYIN-HA)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Kimera: an Open-Source Library for Real-Time Metric-Semantic
+  Localization and Mapping
 Visual-Inertial SLAM の Kimera。IMU の on-manifold preintegration と画像の Shi-Tomasi コーナー特徴点で VIO。DBoW2 でループ検出、GTSAM（iSAM2）でグラフ最適化。メッシュ生成と TSDF での復元。画像でセマンティックラベリングして逆投影し、ボクセルをベイズで更新。
 https://arxiv.org/abs/1910.02490 pic.twitter.com/RSnDbyYV23
  ![bg right:40% fit](https://pbs.twimg.com/media/EbVJJlXUwAEYf24.jpg)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Atlas: End-to-End 3D Scene Reconstruction from Posed Images
 複数視点の2D-CNN出力をVoxelにBack-projetして蓄積し，Voxel mapを3D-CNNに通すことでSemantic情報を含んだMulti-view Stereoを実現．2D-CNNにはResnet50-FPN，3D-CNNはSkip Connectionを持つEncoder-decoderを利用．実時間処理が可能．
 https://arxiv.org/abs/2003.10432 pic.twitter.com/e3e3J3TEua
  ![bg right:40% fit](https://pbs.twimg.com/media/EbPyxA_UYAYaXp2.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Privacy-Preserving Visual Feature Descriptors through Adversarial Affine
+  Subspace Embedding
 特徴量を，それ自身を含む部分アフィン空間へ埋め込みことで，識別機能を保ちながらプライバシーアタックへの耐性を大幅に向上．部分空間同士の距離を導入し特徴マッチングを可能とした．元の特徴量と比較して，僅かな識別性能の低下により高いプラバシー保護性能を実現．
 https://arxiv.org/abs/2006.06634 pic.twitter.com/ex4qczr200
  ![bg right:40% fit](https://pbs.twimg.com/media/EbH-5qqUMAU4zcQ.png)
@@ -221,18 +231,20 @@ http://openaccess.thecvf.com/content_CVPR_2020/html/Wang_VPLNet_Deep_Single_View
  ![bg right:40% fit]()
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## LiDARsim: Realistic LiDAR Simulation by Leveraging the Real World
 Lidarによる実世界データを用いた，従来のCADモデルによる手法よりも多彩で現実感の高い自動運転用シミュレーションを提案．Lidar点群から動的物体や環境マップなどのアセットを作成後，物理レンダリングとDNNでドメインギャップの小さなセンサシミュレーションを行う．https://arxiv.org/abs/2006.09348 pic.twitter.com/nrtVaRw315
  ![bg right:40% fit](https://pbs.twimg.com/media/Ea7i_wTU4AAQXtM.jpg)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Revisiting visual-inertial structure from motion for odometry and SLAM
+  initialization
 VIO, VI-SLAMにおける状態変数の初期化手法を提案．効率的に不要変数を除去しつつ，3つ以上の3D点の観測を平等に扱う新たな定式化．この線形ソルバはシンプルな構造ながら過去の手法と比較してモーション推定の精度を最大50%向上させ，非線形ソルバの反復回数も削減．
 https://arxiv.org/abs/2006.06017 pic.twitter.com/IYHoycp0k8
  ![bg right:40% fit](https://pbs.twimg.com/media/Ea2BLHfU0AA7NHO.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## PointAugment: an Auto-Augmentation Framework for Point Cloud
+  Classification
 End-to-endに学習可能な点群データのAugmentorを提案．入力点群ごとに全体の変形量と個々の点の変位量を出力し，分類器にとってより難しい変換となるよう敵対的に学習する．複数のモデルでランダムな水増しより良い精度を達成．
 https://arxiv.org/abs/2002.10876 pic.twitter.com/Zso2mevGNk
  ![bg right:40% fit](https://pbs.twimg.com/media/Eawp7NpUEAAGRP1.jpg)
@@ -250,13 +262,15 @@ https://www.sciencedirect.com/science/article/pii/S0921889019305202 …pic.twit
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/2ck5_sToayc/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Global visual localization in LiDAR-maps through shared 2D-3D embedding
+  space
 広域なLiDAR地図における単眼カメラの大域位置同定．異種のデータに対するShared embedding spaceを獲得するため，2D-CNNと3D-DNNを一緒に学習する枠組みを提案．同種データ内で完結するSame-Modality lossに加え，異種データ間でCross-Modality lossを用いて学習を行った．
 https://arxiv.org/abs/1910.04871 pic.twitter.com/0Ft0zuZoH8
  ![bg right:40% fit](https://pbs.twimg.com/media/EahWh7MU0AELAKE.jpg)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## 3D Dynamic Scene Graphs: Actionable Spatial Perception with Places,
+  Objects, and Humans
 建物、部屋、物体などの関係を表すシーングラフを動的環境に拡張し、3D Dynamic Scene Graphs を提案。Visual-Inertial SLAM の Kimera を用いてセマンティックマッピング。さらに移動物体（人のメッシュモデル）をトラッキングして、時空間の物体モデル構造を階層的に表現。
 https://arxiv.org/abs/2002.06289 pic.twitter.com/F5yOdQlh7F
  ![bg right:40% fit](https://pbs.twimg.com/media/EacObyPUwAAwARv.jpg)
@@ -274,7 +288,7 @@ RGB-D単眼画像を入力とし，視点を変えると発生する空白領域
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/D0JObXCfxv0/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Novel Object Viewpoint Estimation through Reconstruction Alignment
 未知物体を撮影した画像間の相対姿勢の推定. 学習に用いられた物体以外の視点の推定は困難であったが２枚の画像を3D特徴グリッドにマッピングする学習を行い位置を合わせることで相対的な位置を推定する.学習時と大きく異なる物体で推論する際に従来手法より良い精度を示した.
 https://arxiv.org/abs/2006.03586 pic.twitter.com/SktdplZMb1
  ![bg right:40% fit](https://pbs.twimg.com/media/EaE9eV9UwAEPo9z.png)
@@ -286,13 +300,13 @@ https://arxiv.org/abs/2006.03586 pic.twitter.com/SktdplZMb1
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/sq2hhkHgtb0/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## An Efficient Planar Bundle Adjustment Algorithm
 点群が平面状に分布する制約を加えたPlaner Bundle Adjustmentを提案．ヤコビアン行列のコンパクトな表現を含む新たな定式化によって精度向上と計算量の削減を両立．評価実験で同問題設定のSOTAと比較して高速，高精度に，そして初期値にロバストなことが示された．
 https://arxiv.org/abs/2006.00187 pic.twitter.com/rVKDwkK3LH
  ![bg right:40% fit](https://pbs.twimg.com/media/EZ6nHJqUwAA9OC7.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Point-GNN: Graph Neural Network for 3D Object Detection in a Point Cloud
 GNNを用いた三次元点群からの物体検出手法を提案．近傍点を結んだグラフからGNNで特徴抽出し，点ごとに所属する物体クラスとBBOXを推定．最後に重複したBBOXを中央値で統合する．KITTTIデータセットで従来手法を上回る精度を達成．
 https://arxiv.org/abs/2003.01251 pic.twitter.com/Qu1jOIW3xo
  ![bg right:40% fit](https://pbs.twimg.com/media/EZ483GVU0AEdfeG.png)
@@ -328,13 +342,14 @@ SLAMを構成要素(入出力, フロント/バックエンド, マップスト�
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/Bb92aMBJR44/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Towards Better Generalization: Joint Depth-Pose Learning without PoseNet
 オプティカルフローを経由して8点法により直接推定した相対姿勢，さらにそこから計算した３次元点を自己教師とすることで，スケールの推定をネットワークから分離し，高い汎化性能とスケールの一貫性を実現．屋内外のデータセットでORB-SLAMや学習ベースの手法を凌駕．
 https://arxiv.org/abs/2004.01314 pic.twitter.com/XU3nSsMtX4
  ![bg right:40% fit](https://pbs.twimg.com/media/EZVwVrFUMAIJfoT.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## DiPE: Deeper into Photometric Errors for Unsupervised Learning of Depth
+  and Ego-motion from Monocular Videos
 Unsupervised単眼Depth推定で精度を改善する2つの機構の提案．特定のDepth誤りを，フォトメトリックエラーをもとにした外れ値Maskを導入し対処．また，重み付きマルチスケール機構でアーティファクトを除去．簡単に追加できる機構で，他手法よりも高い精度を達成．
 https://arxiv.org/abs/2003.01360 pic.twitter.com/I0JA9KV4Lo
  ![bg right:40% fit](https://pbs.twimg.com/media/EZRdRrBVcAckBzq.png)
@@ -346,7 +361,7 @@ Volumetricな表現で使用されるTSDFとそれに対応したテクスチャ
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/GuLzjnFGDKs/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## VDO-SLAM: A Visual Dynamic Object-aware SLAM System
 モーションセグメンテーション，動的物体追跡，カメラ姿勢，シーン剛体の姿勢変化や速度の計算を全て行い，実世界の屋外シナリオで実証可能な世界初の動的SLAMシステムを提案．ロバスト性の向上の為，カメラと物体の動きの推定はOptical Flowの改良と合わせて因子グラフ最適化
 https://arxiv.org/abs/2005.11052 pic.twitter.com/esR5t04wPi
  ![bg right:40% fit](https://pbs.twimg.com/media/EZJizyPUYAE03aP.jpg)
@@ -375,13 +390,14 @@ RGB-D画像から特定の物体の6DoF姿勢を3段階で推定．1.2D物体認
  ![bg right:40% fit](https://pbs.twimg.com/media/EYw3pD7U4AESaXj.jpg)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## PrimiTect: Fast Continuous Hough Voting for Primitive Detection
 RGB-Dカメラ等で計測された3次元点群における幾何プリミティブ(円柱，円錐，球)の検出．Point Pair Feature に各幾何プリミティブの形状に応じた拘束を導入，またLinear interpolation votingを幾何プリミティブ用に改良し，ハフ変換による低計算量での頑健な検出を実現．
 https://arxiv.org/abs/2005.07457 pic.twitter.com/AylPuLfTAw
  ![bg right:40% fit](https://pbs.twimg.com/media/EYwEihiU8AAOrk6.jpg)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Feature-metric Registration: A Fast Semi-supervised Approach for Robust
+  Point Cloud Registration without Correspondences
 二つの点群について，特徴空間上で並進・回転に対するヤコビアンを数値微分で求めLucus-Kanade法で位置合わせを実行．また点群に対するEncoder-Decorderを構築し特徴をUn-supervisedまたはSemi-supervisedで学習を可能にした．
 https://arxiv.org/abs/2005.01014 pic.twitter.com/JZeCcd11hS
  ![bg right:40% fit](https://pbs.twimg.com/media/EYl1RBmU8AIEVoz.png)
@@ -393,29 +409,29 @@ self-supervisedに学習可能な，画像のオクルージョン領域を復�
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/xIHCyyaB5gU/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Self-Supervised Deep Visual Odometry with Online Adaptation
 自己教師Visual Odometry手法を提案．畳み込みLSTMを利用することで過去の経験を活かして推定をし，未知のシーンにオンラインで適応することが可能．さらにオープンワールドでの環境の変化に対応するために特徴量を揃える手法を提案．既存の手法を大きく上回ることを実験で確認https://arxiv.org/abs/2005.06136 pic.twitter.com/YMw3oYqEK3
  ![bg right:40% fit](https://pbs.twimg.com/media/EYX8UGzUcAErmZZ.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## End-to-End Pseudo-LiDAR for Image-Based 3D Object Detection
 画像ベースの深度マップを擬似LiDARに変換し3次元物体検出するというパイプライン全体を，End-to-Endで学習するフレームワーク．既存手法では深度推定と物体検出で別学習していたが，間の表現変化をプーリングと量子化の工夫で微分可能にし実現．PointRCNNと組み合わせでSOTA.
 https://arxiv.org/abs/2004.03080 pic.twitter.com/7TfZbZ079s
  ![bg right:40% fit](https://pbs.twimg.com/media/EYWkGGCUcAAMG4l.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## SuperGlue: Learning Feature Matching with Graph Neural Networks
 画像間の局所特徴量をマッチングするGNNを用いたアルゴリズムを提案．視点の大幅な違いにも適用可能．2種類のアテンション機構により画像内，画像間でユニークな特徴量を活用する．GPUでリアルタイム動作し，既存手法と比べ屋内外のシーンで大幅に性能向上．https://arxiv.org/abs/1911.11763 pic.twitter.com/4yuITowWG7
  ![bg right:40% fit](https://pbs.twimg.com/media/EYN-WuXUcAABCpb.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## PointRend: Image Segmentation as Rendering
 CGレンダリングにヒントを得たセグメンテーションの精緻化モジュールを提案．不確かな点をサンプリングし，MLPで推定し直すことで適応的に物体境界を精緻化．Mask-RCNNやFCNに取り付けることで，少ない計算コストで精度向上．
 https://arxiv.org/abs/1912.08193 pic.twitter.com/KwQ6ASEwyf
  ![bg right:40% fit](https://pbs.twimg.com/media/EYL4G6eUEAAfBx6.jpg)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## To Learn or Not to Learn: Visual Localization from Essential Matrices
 画像による自己位置推定の精度評価．Data-drivenな手法は，精度面でIndirect法等の従来手法に劣ることが通説となっている．本論文では，特徴量抽出や基礎行列計算等の各フェーズをハンドクラフトからData-drivenまで程度を変え，各組み合わせにおける精度を検証している．
 https://arxiv.org/abs/1908.01293 pic.twitter.com/Rt4IfVGCGK
  ![bg right:40% fit](https://pbs.twimg.com/media/EYG5FPiVcAECQWL.jpg)
@@ -446,12 +462,14 @@ https://youtu.be/RFhH4j0gzsI pic.twitter.com/JfqoF0LKsA
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/RFhH4j0gzsI/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Weakly Supervised Semantic Segmentation in 3D Graph-Structured Point
+  Clouds of Wild Scenes
 3D点群のクラス推定を2Dのセグメンテーションマップのみを教師として学習するモデルの提案．各点のクラスとvisibilityを推論し，これらで合成した2Dセグメンテーションマップと教師との損失をもとに学習する．複数の物体を含む大規模なシーンでも高い性能を達成．https://arxiv.org/abs/2004.12498v1 …pic.twitter.com/C4Gefp6dFI
  ![bg right:40% fit](https://pbs.twimg.com/media/EXo-QIDUYAALT0S.jpg)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## GPO: Global Plane Optimization for Fast and Accurate Monocular SLAM
+  Initialization
 単眼SLAMの初期化手法を提案.Homography推定後,Global Plane Optimization (GPO)で最適化しカメラ姿勢と平面の法線を取得.複数フレームの平面情報を組み合わせることで三角測量やHomography分解の計算負荷を減らすことが可能で,精度とリアルタイム性で優れていることを示した.
 https://arxiv.org/abs/2004.12051 
  ![bg right:40% fit]()
@@ -463,7 +481,7 @@ https://arxiv.org/abs/2004.12051 
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/H80Bnxm8IPE/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Learning Feature Descriptors using Camera Pose Supervision
 画像間の相対姿勢のみを用いた弱教師あり学習による特徴量抽出手法を提案．中間特徴の相関に基づく微分可能なマッチング層やcourse-to-fine構造のネットワークを用い，エピポーラ幾何の拘束を組み込んだ損失関数で学習を行う．教師あり学習による既存手法の精度を上回った．
 https://arxiv.org/abs/2004.13324 pic.twitter.com/CDPfuoZCOm
  ![bg right:40% fit](https://pbs.twimg.com/media/EXQuefGU0AAZ1ZD.jpg)
@@ -481,7 +499,7 @@ Paper: https://ieeexplore.ieee.org/document/8606275 …pic.twitter.com/2VsW10Ca
  ![bg right:40% fit]()
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## HVNet: Hybrid Voxel Network for LiDAR Based 3D Object Detection
 三次元点群のOne-Stage物体検出Hybrid Voxel Network (HVNet)手法を提案。Pointwiseでのmulti-scale特徴をHybrid Voxel Feature Extraction(HVFE)で抽出、Voxelwise attention featureにエンコード、Pseudo-Image Featureへデカップル、リアルタイムの31HzでSOTAを達成。
 https://arxiv.org/abs/2003.00186 pic.twitter.com/0yyB3iaOkU
  ![bg right:40% fit](https://pbs.twimg.com/media/EW_xwgBUwAAJz8C.jpg)
@@ -493,7 +511,7 @@ https://arxiv.org/abs/2003.00186 pic.twitter.com/0yyB3iaOkU
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/5Tia2oblJAg/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Footprints and Free Space from a Single Color Image
 単眼画像からの自由空間の推定．多視点のステレオ画像から得られた対象環境の幾何情報を単眼画像に集約し学習することで，単一視点からでは不可視な領域に対してもTraversabilityやDepthの評価が可能に．
 https://arxiv.org/abs/2004.06376 pic.twitter.com/7xkhPWGGu8
  ![bg right:40% fit](https://pbs.twimg.com/media/EW-vxpMU4AAsxxf.jpg)
@@ -504,7 +522,8 @@ https://arxiv.org/abs/2004.06376 pic.twitter.com/7xkhPWGGu8
  ![bg right:40% fit](https://pbs.twimg.com/media/EW5q4e_VcAATkwL.jpg)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Deep Local Shapes: Learning Local SDF Priors for Detailed 3D
+  Reconstruction
 Kinect Fusionに利用されているTSDFを学習器に置き換えたDeepSDFを局所適用し，詳細な形状表現を可能にした．DeepSDFは全体を関数近似するのに対し，提案手法はVoxel単位で関数近似．DeepSDFが8日かかった形状復元が，提案手法では1分と大幅に短縮．
 https://arxiv.org/pdf/2003.10983.pdf …pic.twitter.com/Y89OJ9FDXh
  ![bg right:40% fit](https://pbs.twimg.com/media/EW0oDztVAAIjhWL.jpg)
@@ -515,7 +534,7 @@ CVPR2020 Oralに採択されたStanfordのChoyさん( @ChrisChoy208  )の論文�
  ![bg right:40% fit]()
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## SynSin: End-to-end View Synthesis from a Single Image
 任意解像度の単一画像から任意のビューを合成するend-to-endなネットワークの提案．推論したFeatureとDepthを用い点群を構築，微分可能な点群レンダラーとリファインメントネットワークを通すことで欠損のないビューを合成．
 https://arxiv.org/abs/1912.08804 pic.twitter.com/cp2TcgoURr
  ![bg right:40% fit](https://pbs.twimg.com/media/EWm4H8TUMAQ2gk5.png)
@@ -527,19 +546,19 @@ https://arxiv.org/abs/1912.08804 pic.twitter.com/cp2TcgoURr
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/djf7vGtf7CA/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## YOLOv4: Optimal Speed and Accuracy of Object Detection
 CNNによる高速な物体検出器YOLOの最新版YOLOv4を提案．検出器の学習における，Bag of freebiesやBag of specialsによる効果を検証．バッチ正規化や残差スキップ接続など，モデルやデータセットに関して普遍的で効果のよい手法を用いることで精度を向上させた．
 https://arxiv.org/abs/2004.10934 pic.twitter.com/G3cdiZTGMZ
  ![bg right:40% fit](https://pbs.twimg.com/media/EWf6iLgVAAAldSl.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Least Squares Optimization: from Theory to Practice
 反復法による最小自乗を解く新たな最適化システムを提案．既存の問題を統一的に解けるようにソルバを設計することで，疎/密，動的/静的な要素にシームレスに対応した．様々な観点で比較評価を行い，提案手法が既存システムに対し同等以上の速度，精度性能を達成した．
 https://arxiv.org/abs/2002.11051 pic.twitter.com/FUqWsYd55A
  ![bg right:40% fit](https://pbs.twimg.com/media/EWagb_EUYAEJgO6.jpg)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Learning to Segment 3D Point Clouds in 2D Image Space
 グラフ描画のアルゴリズムを用いて3D点群を2D画像に投影する手法を提案。投影した画像にU-Netを適用し、3D点群のセグメンテーションでSOTAを達成。階層的クラスタリングで得られた部分点群ごとに投影することで計算コストを削減。
 http://arxiv.org/abs/2003.05593 pic.twitter.com/4Mt0buWYu9
  ![bg right:40% fit](https://pbs.twimg.com/media/EWRrybDUcAAkDj3.jpg)
@@ -558,13 +577,15 @@ video:https://www.youtube.com/watch?v=-imRJXq6ZuE …pic.twitter.com/WV2OHJKXzA
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/rN6D3QmMNuU/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Efficient Exploration in Constrained Environments with Goal-Oriented
+  Reference Path
 2D地図を入力とした目的地への経路・行動生成手法の提案．GOSELOと呼ばれる地図表現を介しCNNによるWaypointを生成(教師あり学習)，さらにWaypointに沿うような操作量を生成する層(強化学習)を後段に追加することで安全なナビゲーションを実現している．
 https://arxiv.org/abs/2003.01641 pic.twitter.com/yskq5iMDHZ
  ![bg right:40% fit](https://pbs.twimg.com/media/EWGHIEwUYAI5H7e.jpg)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## PerspectiveNet: 3D Object Detection from a Single RGB Image via
+  Perspective Points
 RGB画像1枚から物体の3D Bounding Box(3DBB)と6DoF姿勢推定．3DBB投影時のコーナー点位置をテンプレートの重み付け和で表現し，その重みを推定する枠組み．同時に3DBBの3次元位置姿勢を推定し投影点上でのLossを定義し学習する．
 https://arxiv.org/abs/1912.07744 pic.twitter.com/lVKH8vErzB
  ![bg right:40% fit](https://pbs.twimg.com/media/EWA_xsTU0AAck4E.jpg)
@@ -582,7 +603,7 @@ VAEを用いて学習した各物体カテゴリの3D形状特徴量を，トラ
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/JGL4H93BiNw/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Deep 3D Capture: Geometry and Reflectance from Sparse Multi-View Images
 ワイドベースラインカメラで撮影した6枚の画像から高品質な幾何形状とSVBRDFを復元する学習ベースの手法を提案．各画像ごとに拡散・鏡面アルベド，法線，鏡面粗さをネットワークで推定し，推定結果を融合して幾何形状とSVBRDF得る．従来難しかった疎な画像からの復元に成功．
 https://arxiv.org/abs/2003.12642 pic.twitter.com/Qn5OoQkR0s
  ![bg right:40% fit](https://pbs.twimg.com/media/EVxb1NiU4AEJwkl.jpg)
@@ -600,7 +621,8 @@ CodeSLAMをベースにした新たな深層学習ベースのVisual SLAMシス�
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/htnRuGKZmZw/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## LINS: A Lidar-Inertial State Estimator for Robust and Efficient
+  Navigation
 LIDAR-IMUのオドメトリ推定手法．Error State Kalman Filter上でTight-couplingに最適化を行うことで，従来のグラフベース手法と近い精度を維持しつつ大幅に処理速度を向上させた．
 paper:https://arxiv.org/abs/1907.02233 pic.twitter.com/IQ4YAzhL8q
  ![bg right:40% fit](https://pbs.twimg.com/media/EVaW8PaUMAAm7RO.jpg)
@@ -612,19 +634,20 @@ Object Levelより細かく，新たな形状表現Local Implicit Grid (LIG)を�
  ![bg right:40% fit](https://i.ytimg.com/vi_webp/XCyl1-vxfII/maxresdefault.webp)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## EPOS: Estimating 6D Pose of Objects with Symmetries
 RGB画像における物体の6DoF姿勢推定．Surface fragmentによる3次元モデル表現を介し，物体のPoseを各PixelがどのようなインスタンスやSurface fragmentに対応しうるかを学習．得られた多対多な2D-3D対応をPnP-RANSACによりロバスト化．
 https://arxiv.org/pdf/2004.00605.pdf …pic.twitter.com/Qn2Etv1Nst
  ![bg right:40% fit](https://pbs.twimg.com/media/EVSdYxHU0AIFkpg.jpg)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Beyond Photometric Consistency: Gradient-based Dissimilarity for
+  Improving Visual Odometry and Stereo Matching
 画像の位置合わせに必要なエラーについて，輝度差に代わる新たなメトリックSGFを提案．SGFは勾配画像のコントラストを局所的に正規化し，勾配方向の内積を利用．DSOにSGFを適用したところ精度が改善．
 https://arxiv.org/pdf/2004.04090.pdf …pic.twitter.com/HL3hkOLo61
  ![bg right:40% fit](https://pbs.twimg.com/media/EVNWXyhUUAAYvJo.png)
 
 ---
-## FutureMapping 2: Gaussian Belief Propagation for Spatial AI
+## Voxel Map for Visual SLAM
 Visual SLAMで用いられる従来のキーフレーム表現（covisibility graph）では，3D点の遮蔽関係を記述できないため，ボクセルハッシングと視錐台表現を用いたレイキャスティングにより，高速かつ省メモリに幾何的関係性の記述を可能とした．
 https://arxiv.org/abs/2003.02247 pic.twitter.com/MMeABTUKVP
  ![bg right:40% fit](https://pbs.twimg.com/media/EVII8izVAAE-WVi.png)
