@@ -78,4 +78,83 @@ docker run --rm -it -v /home/yoshi/Documents/GitHub/MyMemo/src/Twitter:/app twit
 
 もっとたくさんあるはずだが？？
 
-# DL サムネイルてすと
+# Twintを用いた解析
+
+Twintを用いる。
+
+環境：Docker WSL2
+
+git clone --depth=1 https://github.com//twintproject/twint-docker
+cd twint-docker/dockerfiles/latest/slim
+docker pull x0rzkov/twint:latest 
+alias twint="docker run -ti --rm -v $(pwd)/data:/opt/app/data x0rzkov/twint:latest-slim" 
+docker-compose up -d elasticsearch kibana  
+sudo apt install docker-compose 
+docker network  create nw-twint
+
+
+
+## Self try
+Composeの全容がわからんので自分でもやってみる。
+
+Dockerfileの中身はこんなん
+
+```
+FROM python:3.7-slim-stretch
+
+MAINTAINER x0rxkov <x0rxkov@protonmail.com>
+
+ARG TWINT_VERSION=v2.1.16
+
+COPY docker-entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+RUN \
+apt-get update && \
+apt-get install -y \
+git
+
+RUN \
+pip3 install --upgrade -e git+https://github.com/twintproject/twint.git@v2.1.16#egg=twint
+
+RUN \
+apt-get clean autoclean && \
+rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+ENTRYPOINT ["/entrypoint.sh"]
+VOLUME /twint
+WORKDIR /opt/twint/data
+```
+
+普通にDockerfileを落としてきてプログラム回せば良さそう。
+
+普通にPullして以下を実行すれば良いように見える。
+
+```
+docker pull x0rzkov/twint:latest
+docker run -ti --rm -v $(pwd)/data:/opt/twint/data x0rzkov/twint:latest -u slam_hub -o slamhub_twint.json
+```
+
+- package install
+- twint install
+- Dockerの中でDockerを走らせる？
+
+docker run -it --rm --entrypoint=/bin/bash x0rzkov/twint:latest -i
+
+entrypoint≒CMDっぽい
+https://qiita.com/hihihiroro/items/d7ceaadc9340a4dbeb8f
+
+
+
+Docker imageのコマンド確認
+
+```
+docker inspect [イメージ名] --format='{{.Config.Cmd}}'
+```
+
+bashを開く
+
+```
+docker run -it [イメージ名] /bin/bash
+```
+
