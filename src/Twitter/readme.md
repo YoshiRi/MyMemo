@@ -126,6 +126,10 @@ VOLUME /twint
 WORKDIR /opt/twint/data
 ```
 
+やってることは
+twint $@
+なので
+
 普通にDockerfileを落としてきてプログラム回せば良さそう。
 
 普通にPullして以下を実行すれば良いように見える。
@@ -139,11 +143,10 @@ docker run -ti --rm -v $(pwd)/data:/opt/twint/data x0rzkov/twint:latest -u slam_
 - twint install
 - Dockerの中でDockerを走らせる？
 
-docker run -it --rm --entrypoint=/bin/bash x0rzkov/twint:latest -i
 
+#### 
 entrypoint≒CMDっぽい
 https://qiita.com/hihihiroro/items/d7ceaadc9340a4dbeb8f
-
 
 
 Docker imageのコマンド確認
@@ -152,9 +155,29 @@ Docker imageのコマンド確認
 docker inspect [イメージ名] --format='{{.Config.Cmd}}'
 ```
 
+CMDしか表示されない。
+
+Entrypointも確認する必要あり。
+
+```
+docker inspect [イメージ名] --format='{{.Config.Entrypoint}}'
+```
+
+
 bashを開く
 
 ```
 docker run -it [イメージ名] /bin/bash
 ```
 
+どうしてこれができるん？
+https://pocketstudio.net/2020/01/31/cmd-and-entrypoint/  
+イメージを実行する時、コンテナに対して何もオプションを指定しなければ、自動的に実行するコマンドを CMD 命令で指定するのがCMD。よってコンテナ実行時に引数のオプションがあれば、CMD 命令よりも実行時の引数が優先されるため。
+
+
+entrypointを無理くり変えて実行
+```
+docker run -it --rm --entrypoint=/bin/bash x0rzkov/twint:latest -i
+```
+
+ENTRYPOINT（”入り口”の意味）は、コンテナの実行時にデフォルトで実行するコマンドと引数（オプション）です
