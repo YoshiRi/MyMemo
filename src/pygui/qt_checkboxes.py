@@ -34,7 +34,8 @@ class Example(QWidget):
       # ラベルを作る
       label1=QtWidgets.QLabel(self)
       label1.setText("label1")
-      label1.addWidget()
+      label1.adjustSize()
+      
 
 
       # 水平に分割

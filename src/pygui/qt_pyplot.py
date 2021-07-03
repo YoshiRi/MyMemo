@@ -58,8 +58,15 @@ class Application(QtWidgets.QWidget):
         #self.FigureWidget.setGeometry(200,0,700,600)
         #self.FileList.setGeometry(0,0,200,600)
         hbox = QtWidgets.QHBoxLayout(self)
+        vbox = QtWidgets.QVBoxLayout(self)
+        vbox.addWidget(self.add_label("file name"))
+        vbox.addWidget(self.FileList)
+        frame_vbox = QtWidgets.QFrame(self)
+        frame_vbox.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        frame_vbox.setLayout(vbox)
+
         splitter1 = QtWidgets.QSplitter(Qt.Horizontal)
-        splitter1.addWidget(self.FileList)
+        splitter1.addWidget(frame_vbox)
         splitter1.addWidget(self.FigureWidget)
         # Widgetを追加
         hbox.addWidget(splitter1)
@@ -68,6 +75,13 @@ class Application(QtWidgets.QWidget):
         self.setLayout(hbox)
         QApplication.setStyle(QStyleFactory.create('Cleanlooks'))
 
+    def add_label(self,text):
+        # ラベルを作る
+        label1=QtWidgets.QLabel(self)
+        label1.setText(text)
+        label1.adjustSize()
+        return label1
+        
 
     # Figureの初期化
     def initFigure(self):
