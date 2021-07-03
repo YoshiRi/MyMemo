@@ -8,6 +8,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 
 import glob
@@ -53,13 +55,24 @@ class Application(QtWidgets.QWidget):
 
         # 配置
         self.setGeometry(0,0,900,600)
-        self.FigureWidget.setGeometry(200,0,700,600)
-        self.FileList.setGeometry(0,0,200,600)
+        #self.FigureWidget.setGeometry(200,0,700,600)
+        #self.FileList.setGeometry(0,0,200,600)
+        hbox = QtWidgets.QHBoxLayout(self)
+        splitter1 = QtWidgets.QSplitter(Qt.Horizontal)
+        splitter1.addWidget(self.FileList)
+        splitter1.addWidget(self.FigureWidget)
+        # Widgetを追加
+        hbox.addWidget(splitter1)
+
+        # レイアウト適用
+        self.setLayout(hbox)
+        QApplication.setStyle(QStyleFactory.create('Cleanlooks'))
+
 
     # Figureの初期化
     def initFigure(self):
         # Figureを作成
-        self.Figure = plt.figure()
+        self.Figure = plt.figure(1)
         # FigureをFigureCanvasに追加
         self.FigureCanvas = FigureCanvas(self.Figure)
         # LayoutにFigureCanvasを追加
@@ -98,7 +111,8 @@ class Application(QtWidgets.QWidget):
 
     # Figureを更新
     def update_Figure(self):
-        self.axis_image.set_data(self.image)
+        #self.axis_image.set_data(self.image)
+        self.axis.imshow(self.image)
         self.FigureCanvas.draw()
 
 QApp = QtWidgets.QApplication(sys.argv)
