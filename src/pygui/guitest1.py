@@ -21,10 +21,10 @@ class Example(QtWidgets.QWidget):
 
         """
         for msg_type in has_type:
-            frame_left[msg_type] = QtWidgets.QFrame(self)
+            frame_left[msg_type] = QtWidgets.QFrame(self) # 枠組み
             frame_left[msg_type].setFrameShape(QtWidgets.QFrame.StyledPanel)
             vbox_left[msg_type] = QtWidgets.QVBoxLayout(self)
-            label_left[msg_type] = QtWidgets.QLabel(self)
+            label_left[msg_type] = QtWidgets.QLabel(self) # ラベル作成
             label_left[msg_type].setText(msg_type)
             label_left[msg_type].adjustSize()
             vbox_left[msg_type].addWidget(label_left[msg_type])
@@ -47,35 +47,42 @@ class Example(QtWidgets.QWidget):
         label_left_var.adjustSize() # 位置調整
         vbox_left_var.addWidget(label_left_var) # Widget追加
 
-        frame_left_var = QtWidgets.QFrame(self)
-        frame_left_var.setFrameShape(QtWidgets.QFrame.StyledPanel)
-
+        frame_left_var = QtWidgets.QFrame(self) # Frame定義
+        frame_left_var.setFrameShape(QtWidgets.QFrame.StyledPanel) # 形状決定。パネル。
+        """
         for var in bag_reader.var_types:
-            cb = QtWidgets.QCheckBox(var, self)
+            cb = QtWidgets.QCheckBox(var, self) # チェックボックス
             cb.stateChanged.connect(self.addVar)
             vbox_left_var.addWidget(cb)
+        """
         vbox_left_var.addStretch(0)
-        frame_left_var.setLayout(vbox_left_var)
-        splitter_left.addWidget(frame_left_var)
+        frame_left_var.setLayout(vbox_left_var)# QVboxLayoutを設定
+        splitter_left.addWidget(frame_left_var) #  それを左側に追加
+        
 
-        frame_left_control = QtWidgets.QFrame(self)
-        frame_left_control.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        frame_left_control = QtWidgets.QFrame(self) # フレーム定義
+        frame_left_control.setFrameShape(QtWidgets.QFrame.StyledPanel) # パネル作成
 
+        # ボタン類を入れるレイアウトを追加
         vbox_left_control = QtWidgets.QVBoxLayout(self)
+        # ボタン定義
         load_btn = QtWidgets.QPushButton('Load', self)
         clear_btn = QtWidgets.QPushButton('Clear', self)
         save_btn = QtWidgets.QPushButton('Save Figure', self)
         load_btn.clicked.connect(self.buttonClicked)
         clear_btn.clicked.connect(self.buttonClearClicked)
         save_btn.clicked.connect(self.buttonSaveClicked)
+        # 縦に並べるレイアウト
         vbox_left_control.addWidget(load_btn)
         vbox_left_control.addWidget(clear_btn)
         vbox_left_control.addWidget(save_btn)
         vbox_left_control.addStretch(1)
         frame_left_control.setLayout(vbox_left_control)
+        # Splitterに追加
         splitter_left.addWidget(frame_left_control)
 
 
+        # Matplotlibの右側のやつを追加
         frame_right = QtWidgets.QFrame(self)
         frame_right.setFrameShape(QtWidgets.QFrame.StyledPanel)
         #frame_right.setPaletteBackgroundColor(Qt::black);
