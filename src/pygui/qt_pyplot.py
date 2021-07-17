@@ -26,6 +26,9 @@ class Application(QtWidgets.QWidget):
         # 拡張子
         self.ext = 'png'
 
+        # チェックリスト用
+        self.clicked_list = []
+
         # ファイルを配置
         self.set_FileList()
 
@@ -67,7 +70,8 @@ class Application(QtWidgets.QWidget):
 
         splitter1 = QtWidgets.QSplitter(Qt.Horizontal)
         splitter1.addWidget(frame_vbox)
-        splitter1.addWidget(self.FigureWidget)
+        splitter1.addWidget(self.add_checklist_frame(["a","b","c"]))
+        #splitter1.addWidget(self.FigureWidget)
         # Widgetを追加
         hbox.addWidget(splitter1)
 
@@ -81,7 +85,35 @@ class Application(QtWidgets.QWidget):
         label1.setText(text)
         label1.adjustSize()
         return label1
-        
+    
+    def add_QBoxFrame(self,qbox):
+        frame = QtWidgets.QFrame(self) # Frame定義
+        frame.setFrameShape(QtWidgets.QFrame.StyledPanel) # 形状決定。パネル。
+        qbox.addStretch(1)
+        frame.setLayout(qbox)
+        return frame        
+
+    def add_checklist_frame(self,lists):
+        vbox = self.add_checklist(lists)
+        return self.add_QBoxFrame(vbox)
+
+    def add_checklist(self,lists):
+        vbox = QtWidgets.QVBoxLayout(self)
+        for name in lists:
+            chxlist = QtWidgets.QCheckBox(name, self)
+            chxlist.stateChanged.connect(self.checklist_clicked)
+            vbox.addWidget(chxlist)
+        return vbox
+
+    def checklist_clicked(self, state):
+        checked_name = str(self.sender().text())
+        if state == Qt.Checked: # if checked
+            # add to the list
+            self.clicked_list.append(checked_name)
+        else: # if unchecked
+            # remove from list
+            self.clicked_list = [x for x in self.clicked_list if not x == checked_name]
+            
 
     # Figureの初期化
     def initFigure(self):
